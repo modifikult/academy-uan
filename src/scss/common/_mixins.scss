@@ -1,0 +1,52 @@
+@mixin btn($bg, $color, $br-color, $h-bg, $h-color, $br: 10px) {
+  background: $bg;
+  color: $color;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: $br;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .4s ease, color .4s ease;
+  position: relative;
+  border: 2px solid $br-color;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: $br;
+    width: 100%;
+    display: inline-block;
+    opacity: 0;
+    pointer-events: all;
+    transition: opacity 0.3s linear;
+    background: linear-gradient(to right, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(24, 143, 210, 1);
+    color: white;
+    border: none;
+
+    &::after {
+      opacity: 1;
+      transition: opacity 0.3s linear;
+    }
+  }
+}
+
+@mixin link($color, $h-color) {
+  text-decoration: none;
+  color: $color;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all .4s ease;
+  &:hover {
+    color: $h-color;
+  }
+}

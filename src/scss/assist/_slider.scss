@@ -1,0 +1,67 @@
+@import "../common/vars";
+@import "../common/mixins";
+
+.def-pagination {
+  height: 30px;
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.swiper {
+  overflow: hidden;
+}
+
+.def-button-prev,
+.def-button-next {
+  top: auto;
+  bottom: 47px;
+  width: 41px;
+  height: 41px;
+  background: $blue;
+  border-radius: 50%;
+  transition: all .4s ease;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: inline-block;
+    opacity: 0;
+    pointer-events: all;
+    transition: opacity 0.3s linear;
+    background: linear-gradient(to right, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+      transition: opacity 0.3s linear;
+    }
+  }
+}
+
+.def-button-prev,
+.def-button-next {
+  svg {
+    path {
+      stroke: #fff;
+    }
+  }
+
+  &:after {
+    content: '';
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .def-button-prev,
+  .def-button-next {
+    display: none;
+  }
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    @@include('./parts/links.html')
+
+    <title>AcademyUan</title>
+</head>
+<body>
+
+<!-- Подключение header для пользователей которые залогинились-->
+@@include('./parts/header-logout.html')
+
+<main>
+    <section class="authorization">
+        <div class="authorization-left">
+            <div class="authorization-bg">
+                <img src="img/authorization-bg.png" alt="authorization-img" class="lazyload">
+            </div>
+            <div class="text">
+                <span>
+                    Welcome to our international platform
+                </span>
+                <p>
+                    Here you can find courses on interesting topics
+                    from the best speakers
+                </p>
+            </div>
+        </div>
+        <div class="authorization-right">
+            <div class="tabs__btn">
+                <a href="#authorization" class="active">Authorization</a>
+                <a href="#create-account">Create a personal account</a>
+            </div>
+            <div class="tabs__content">
+                <div id="authorization" class="open">
+                    <form>
+                        <label>
+                            E-mail
+                            <input type="email" placeholder="Cristina Bednar">
+                        </label>
+                        <label>
+                            Password
+                            <input type="password">
+                        </label>
+                        <button type="submit" class="btn-blue">
+                            Authorization
+                        </button>
+                    </form>
+                </div>
+                <div id="create-account">
+                    <form>
+                        <label>
+                            Full Name
+                            <input type="email" placeholder="Cristina Bednar">
+                        </label>
+                        <label>
+                            E-mail
+                            <input type="email" placeholder="CrisBednar@gmail.com">
+                        </label>
+                        <label>
+                            Phone
+                            <input type="tel" placeholder="+38 (093) 11 893 98">
+                        </label>
+                        <div>
+                            <label for="country">
+                                Country
+                            </label>
+                            <select id="country">
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="Poland">Poland</option>
+                                <option value="France">France</option>
+                                <option value="Switzerland">Switzerland</option>
+                            </select>
+                        </div>
+                        <label>
+                            Date of birth
+                            <input type="date">
+                        </label>
+                        <div>
+                            <label for="fields-of-interest">Fields of interest</label>
+                            <select id="fields-of-interest" multiple="multiple">
+                                <option value="Fields-1">Fields-1</option>
+                                <option value="Fields-2">Fields-2</option>
+                                <option value="Fields-3">Fields-3</option>
+                            </select>
+                        </div>
+                        <label>
+                            Password
+                            <input type="password">
+                        </label>
+                        <label>
+                            Confirm password
+                            <input type="password">
+                        </label>
+                        <p>
+                            Membership in UAN
+                        </p>
+                        <label>
+                            <input type="radio" name="membership" checked>
+                            I am member of UAN
+                        </label>
+                        <label>
+                            <input type="radio" name="membership" >
+                            I am not the member of UAN
+                        </label>
+                        <button type="submit" class="btn-blue">
+                            Create account
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./parts/footer.html')
+
+@@include('./parts/scripts.html')
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+.module-details {
+  padding: 0 0 120px;
+    .container {
+      .course-details__schedule {
+        margin: 0;
+      }
+    }
+}
+
+@media screen and (max-width: 991px) {
+  .module-details {
+    padding-bottom: 40px;
+  }
+}

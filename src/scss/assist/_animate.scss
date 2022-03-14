@@ -1,0 +1,132 @@
+@import "../common/vars";
+
+.anim {
+  opacity: 0;
+}
+
+.anim-start {
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+}
+
+.anim-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom-2 {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    opacity: .7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 172, 224, 0.7);
+    border-radius: 50%;
+    opacity: 1;
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(52, 172, 224, 0);
+    border-radius: 50%;
+    opacity: 1;
+
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
+    border-radius: 50%;
+    opacity: 1;
+
+  }
+}
+
+@keyframes button-shadow-1 {
+  0% {
+    box-shadow: 0 0 0 0 $blue;
+  }
+  50% {
+    box-shadow: 0 0 20px 1px $blue;
+  }
+  100% {
+    box-shadow: 0 0 0 0 $blue;
+  }
+}
+
+@keyframes button-shadow-2 {
+  0% {
+    box-shadow: 0 0 0 0 $secondary-color;
+  }
+  50% {
+    box-shadow: 0 0 20px 1px $secondary-color;
+  }
+  100% {
+    box-shadow: 0 0 0 0 $secondary-color;
+  }
+}
+
+@keyframes button-shadow-3 {
+  0% {
+    box-shadow: 0 0 0 0 #B9C7D5;
+  }
+  50% {
+    box-shadow: 0 0 20px 1px #B9C7D5;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #B9C7D5;
+  }
+}
+
+@keyframes button-shadow-4 {
+  0% {
+    box-shadow: 0 0 0 0 #34A360;
+  }
+  50% {
+    box-shadow: 0 0 20px 1px #34A360;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #34A360;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .anim {
+    opacity: 1;
+  }
+
+  .anim-heading {
+    animation-name: none;
+    span {
+      opacity: 1;
+    }
+  }
+}
+

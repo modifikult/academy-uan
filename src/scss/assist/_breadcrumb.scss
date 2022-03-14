@@ -1,0 +1,55 @@
+@import '../common/vars';
+
+.breadcrumb {
+  padding-top: 50px;
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+
+  ol {
+    list-style: none;
+    display: flex;
+    overflow-y: hidden;
+
+
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      flex: 0 0 auto;
+
+      a {
+        text-decoration: none;
+        color: $blue;
+      }
+
+      svg {
+        width: 10px;
+        height: 14px;
+        margin: 0 12.5px;
+
+        path {
+          stroke: #3A3A46;
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .breadcrumb {
+    padding-top: 30px;
+    ol {
+      li {
+        font-size: 12px;
+
+        svg {
+          margin: 0 9px;
+          width: 8px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}

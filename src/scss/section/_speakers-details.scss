@@ -1,0 +1,194 @@
+@import "../common/vars";
+
+.speakers-details {
+  position: relative;
+  margin-bottom: 100px;
+
+  .courses {
+    padding-bottom: 70px;
+  }
+
+  .speakers {
+    padding-bottom: 70px;
+  }
+}
+
+.speakers-details__description {
+  display: flex;
+
+  .img {
+    width: 25.19%;
+    height: 361px;
+    display: flex;
+    align-items: center;
+
+
+    > img {
+      width: 100%;
+      height: 100%;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+
+  .text {
+    margin-left: 30px;
+    width: 74.41%;
+    position: relative;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    > span {
+      display: block;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      color: $secondary-color;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      display: flex;
+      > div {
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+          margin-right: 20px;
+        }
+
+        img {
+          margin-right: 5px;
+        }
+
+        span {
+          font-size: 14px;
+          line-height: 20px;
+          color: $blue;
+        }
+      }
+
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    .info-title {
+      color: $blue;
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 600;
+      text-decoration: underline;
+      z-index: 20;
+      position: relative;
+      padding-top: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .more-info {
+      position: relative;
+      max-height: 100px;
+
+      h4 {
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 700;
+        margin-top: 40px;
+      }
+
+      span {
+        font-size: 14px;
+        line-height: 19px;
+        display: block;
+        margin-top: 10px;
+        color: $secondary-color;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 30px 0;
+      }
+
+      ul, ol {
+        margin: 40px 0;
+        list-style: none;
+
+        li {
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-right: 20px;
+          }
+
+          &:not(:last-of-type) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .speakers-details__description {
+    .img {
+      width: 30%;
+    }
+
+    .text {
+      width: 69%;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .speakers-details {
+    .courses {
+      padding-bottom: 40px;
+    }
+
+    .speakers {
+      padding-bottom: 40px;
+    }
+  }
+  .speakers-details__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .img {
+      width: 400px;
+      margin-bottom: 30px;
+    }
+
+    .text {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .speakers-details__description {
+    .img {
+      width: 100%;
+      height: auto;
+    }
+
+    .text {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
